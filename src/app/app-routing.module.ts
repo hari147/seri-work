@@ -18,7 +18,9 @@ const routes: Routes = [
         path: 'access-denied',
         loadChildren: () => import('./access-denied/access-denied.module').then((m) => m.AccessDeniedModule)
     },
+    { path: 'glauc', loadChildren: () => import('./glauc/glauc.module').then((m) => m.GlaucModule) },
     { path: 'not-found', loadChildren: () => import('./not-found/not-found.module').then((m) => m.NotFoundModule) },
+
     { path: '**', redirectTo: 'not-found' }
 ];
 
